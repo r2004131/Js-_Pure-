@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen text-white flex items-center justify-center antialiased p-4">
+
+  <div class="bg-slate-800/60 backdrop-blur-md border border-slate-700 rounded-2xl shadow-2xl p-6 w-full max-w-lg">
+
+    <h1 class="text-2xl font-bold mb-1">قائمة المهام</h1>
+    <p class="text-slate-400 text-sm mb-4">أضف مهامك وتابعها</p>
+
+    <!-- الإدخال -->
+    <div class="flex gap-2 mb-4">
+      <input id="task-input"
+             type="text"
+             placeholder="اكتب مهمة جديدة..."
+             class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-2 outline-none focus:ring-2 focus:ring-amber-500 transition" />
+      <button id="add-btn"
+              class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-5 rounded-xl transition">
+        إضافة
+      </button>
+    </div>
+
+    <!-- القائمة -->
+    <ul id="task-list" class="space-y-2 max-h-80 overflow-y-auto pr-1"></ul>
+
+    <!-- مسح الكل -->
+    <button id="clear-btn"
+            class="mt-4 w-full text-sm text-slate-400 hover:text-red-400 underline underline-offset-4 transition">
+      مسح الكل
+    </button>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+</html>

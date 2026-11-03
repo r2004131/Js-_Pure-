@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter App</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen text-white flex items-center justify-center antialiased">
+
+  <div class="bg-slate-800/60 backdrop-blur-md border border-slate-700 rounded-2xl shadow-2xl p-8 w-80 text-center">
+
+    <h1 class="text-2xl font-bold mb-1">Counter</h1>
+    <p class="text-slate-400 text-sm mb-6">اضغط + أو −</p>
+
+    <!-- الرقم -->
+    <div id="display"
+         class="text-7xl font-extrabold text-amber-400 mb-8 transition-all duration-200">
+      0
+    </div>
+
+    <!-- الأزرار -->
+    <div class="flex items-center justify-center gap-4">
+      <button id="decrease-btn"
+              class="w-16 h-16 rounded-full bg-red-600 hover:bg-red-700 transition text-3xl font-bold shadow-lg shadow-red-900/40 disabled:opacity-40 disabled:cursor-not-allowed">
+        −
+      </button>
+
+      <button id="increase-btn"
+              class="w-16 h-16 rounded-full bg-emerald-600 hover:bg-emerald-700 transition text-3xl font-bold shadow-lg shadow-emerald-900/40">
+        +
+      </button>
+    </div>
+
+    <!-- زرار إعادة الضبط (اختياري) -->
+    <button id="reset-btn"
+            class="mt-6 text-sm text-slate-400 hover:text-amber-400 underline underline-offset-4 transition">
+      إعادة الضبط
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
